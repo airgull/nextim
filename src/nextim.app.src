@@ -1,0 +1,29 @@
+{application, nextim,
+ [
+  {description, "webim broker"},
+  {vsn, "4.0"},
+  {modules, [nextim, 
+             nextim_app,
+             nextim_auth,
+             nextim_client,
+             nextim_client_sup,
+             nextim_ctl,
+             nextim_httpd,
+             nextim_meter,
+             nextim_rooms,
+             nextim_roster,
+             nextim_router,
+             nextim_sup]},
+  {registered, [nextim_auth,
+                nextim_httpd,
+                nextim_meter,
+                nextim_rooms,
+                nextim_roster,
+                nextim_router]},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { nextim_app, []}},
+  {env, []}
+ ]}.
